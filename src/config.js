@@ -1,4 +1,6 @@
 export default {
+    MAX_ATTACHMENT_SIZE: 5000000,
+    STRIPE_KEY: "pk_test_51GrFrZBfNn8dyimJHu1Se8Ojx2pBn0j4cEkQmQ2WIa79TfUpFhnf9OPEk4AkMu30FeW13wSr4xhae8hbtkusqpj700AgJkUwqd",
     s3: {
       REGION: "us-east-2",
       BUCKET: "subrat-notes-app-uploads"
