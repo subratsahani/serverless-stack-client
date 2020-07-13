@@ -1,5 +1,5 @@
 .Home .lander {
-    padding: 80px 0;
+    padding: 50px 0;
     text-align: center;
   }
   
@@ -21,5 +21,445 @@
     text-overflow: ellipsis;
   }
   .Home .notes p {
-    color: #666;
+	/* color: #666; */
+	color: #999;
   }
+
+
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+body {
+    font-family:"Open Sans", sans-serif;
+    font-size:2em;
+    color:#777;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:#333;
+    line-height:1.4;
+    font-weight:700;
+}
+
+.mx-width {
+    max-width:960px;
+    margin:0 auto;
+}
+
+a,a:hover {
+    color:#563d7c;
+    text-decoration:none;
+}
+
+img {
+    max-width:100%;
+}
+
+header {
+    padding-bottom:50px;
+}
+
+.intro {
+    font-family:"Open Sans", sans-serif;
+    font-size:60px;
+    line-height:1;
+    font-weight:300;
+    color:#fff
+}
+
+.learn {
+    font-family:"Open Sans", sans-serif;
+    font-size:27px;
+    line-height:1.4;
+    font-weight:300;
+    color:#fff;
+}
+
+.jumbotron-fluid {
+    padding:0;
+}
+
+.spad {
+	padding-top: 110px;
+	padding-bottom: 105px;
+}
+
+/* PARALLAX
+-------------------------------------------------*/
+.parallax {
+    text-align:center;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed!important;
+    overflow:hidden;
+}
+
+.parallax-pattern-overlay {
+    /* background-image:url(../img/pattern.png); */
+    background-repeat:repeat;
+}
+
+
+/* HEADING
+-------------------------------------------------*/
+.heading {
+    padding-bottom:15px;
+    text-align:center;
+    max-width:960px;
+    margin:0 auto;
+    padding-top:80px;
+}
+
+.heading h2 {
+    font-weight:600;
+    font-family:"Open Sans", sans-serif;
+    font-size:40px;
+    color:#333;
+    margin:0;
+    padding:5px;
+}
+
+.heading h2::first-letter {
+    color:#563d7c;
+    font-weight:700;
+}
+
+.heading h3 {
+    font-size:1em;
+    line-height:1.7;
+}
+
+#site-title {
+    max-width:150px;
+}
+
+
+/* CONTACT
+-------------------------------------------------*/
+input.form-control {
+    background:#fff;
+    border:solid 1px #ddd;
+    color:#000;
+    padding:15px 30px;
+    margin-right:3%;
+    margin-bottom:30px;
+    outline:none;
+    border-radius: 0;
+}
+
+
+
+textarea.form-control {
+    background:#fff;
+    color:#000;
+    border:solid 1px #ddd;
+    padding:15px 30px;
+    margin-bottom:40px;
+    outline:none;
+    height:200px;
+    border-radius: 0;
+}
+
+button.contact.submit {
+    background:#333;
+    font-family:"Open Sans", sans-serif;
+    color:#fff;
+    font-size:1em;
+    font-weight:400;
+    text-align:center;
+    margin:0;
+    border:none!important;
+    border-radius:3px;
+    padding:15px 45px;
+}
+
+button.contact.submit:hover {
+    background:#563d7c;
+}
+
+.form-control:focus{
+    border-color: #563d7c;
+    outline: 0;
+}
+
+
+.done {
+    display:none;
+}
+
+
+/* CONTACT
+-------------------------------------------------*/
+.footer {
+    background:#563d7c;
+    margin-top:120px;
+    position:relative
+}
+
+.footer .container {
+    padding:60px 0 20px;
+}
+
+.footer ul {
+    margin:0 auto;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-align:center;
+    list-style-type:none;
+    padding-left:0;
+}
+
+.footer ul li {
+	text-align:center;
+    display:inline-block;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    line-height:45px;
+    margin:0 4px;
+    width:45px!important;
+    height:45px!important;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+
+.footer ul li:hover {
+    background:#2a2a2a;
+}
+
+.footer ul li:hover	a {
+    color:#fff;
+}
+
+.footer ul li a {
+    color:#fff;
+    width:42px!important;
+    height:42px!important;
+}
+
+.footer ul li a i {
+    line-height:45px;
+    color:#fff;
+}
+
+.footer p {
+    color:#fff;
+    font-size:.9em;
+    line-height:24px;
+    font-weight:300;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.footer a,.footer a:hover {
+    color:#fff;
+}
+
+
+/* MEDIA QUERIES
+-------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+
+input.contact.col-md-6{
+    width:40.5%;
+    margin: 15px 15px 0 58px;
+}
+
+textarea.contact.col-md-12 {
+     margin: 15px 15px 0 58px;
+}
+
+button#submit.contact.submit{
+    margin: 15px 15px 0 42px;
+}
+
+}
+.card-img-top{
+  width:100%;
+  height:auto;
+}
+
+p.card-text {
+	color:#999;
+}
+/*------------------
+  Pricing section
+---------------------*/
+
+.pricing-section {
+	background: #f9f2f0;
+}
+
+.pricing-item {
+	text-align: center;
+	background: #fff;
+	padding-bottom: 40px;
+	margin: 15px 0;
+	border-radius: 13px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+	box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.pricing-item:hover {
+	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+}
+
+.pricing-item .pi-top {
+	height: 156px;
+	padding-top: 26px;
+	background: #f65d5d;
+}
+
+.pricing-item .pi-top h4 {
+	/* font-family: "Playfair Display", serif; */
+	font-family: "Open Sans", sans-serif;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.pricing-item .pi-price {
+	width: 144px;
+	height: 144px;
+	margin: -71px auto 30px;
+	padding-top: 35px;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+	box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+}
+
+.pricing-item .pi-price h3 {
+	font-size: 40px;
+	font-weight: 700;
+	color: #666666;
+}
+
+.pricing-item .pi-price p {
+	text-transform: uppercase;
+	color: #999999;
+}
+
+.pricing-item ul {
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.pricing-item ul li {
+	font-size: 16px;
+	color: #999;
+	margin-bottom: 12px;
+	margin-right: 39px;
+}
+
+.pricing-item.begginer .pi-top {
+	background: #fdb07d;
+}
+
+.pricing-item.entermediate .pi-top {
+	background: #fa8f70;
+}
+
+.pricing-item.advanced .pi-top {
+	background: #f2786f;
+}
+
+.pricing-item.professional .pi-top {
+	background: #f65d5d;
+}
+
+/*------------------
+  Contact Us section
+---------------------*/
+
+.signup-map {
+	position: relative;
+	height: 100%;
+	background: #ddd;
+	border-radius: 12px;
+	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+	overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+only screen and (min-width: 576px) and (max-width: 767px),
+(max-width: 576px) {
+	.signup-map {
+		height: 400px;
+		margin-bottom: 40px;
+	}
+}
+
+.signup-map iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+.singup-text {
+	padding-right: 50px;
+	margin-bottom: 40px;
+}
+
+.singup-text h3 {
+	font-weight: 400;
+	/* font-family: "Playfair Display", serif; */
+	font-family: "Open Sans", sans-serif;
+	margin-bottom: 15px;
+}
+
+.singup-form input,
+.singup-form textarea {
+	width: 100%;
+	height: 49px;
+	padding: 5px 28px;
+	font-size: 14px;
+	color: #999;
+	border-radius: 50px;
+	margin-bottom: 20px;
+	border: 1px solid #e6e6e6;
+	background: #fafafa;
+}
+
+.singup-form textarea {
+	height: 140px;
+	padding: 15px 28px 10px;
+	border-radius: 20px;
+	resize: none;
+}
+
+p {
+	color:#999;
+	font-size: 16px;
+}
+
+.list-group-item+.list-group-item {
+    font-size: 16px;
+}
+
+.clickDiv {
+		position:absolute; 
+		width:100%;
+		height:100%;
+		top:0;
+		left: 0;
+	  
+		z-index: 1;
+	  
+		/* fixes overlap error in IE7/8, 
+		   make sure you have an empty gif */
+		/* 	 */
+}

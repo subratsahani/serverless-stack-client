@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { API } from "aws-amplify";
 import { onError } from "../libs/errorLib";
@@ -6,9 +6,12 @@ import config from "../config";
 import { Elements, StripeProvider } from "react-stripe-elements";
 import BillingForm from "../components/BillingForm";
 import "./Settings.css";
+//import { s3Upload } from "../libs/awsLib";
 
 export default function Settings() {
   const history = useHistory();
+  //const file = useRef(null);
+  const [content, setContent] = useState("PAID");
   const [isLoading, setIsLoading] = useState(false);
   const [stripe, setStripe] = useState(null);
 
@@ -19,6 +22,12 @@ export default function Settings() {
   function billUser(details) {
     return API.post("notes", "/billing", {
       body: details
+    });
+  }
+
+  function createNote(note) {
+    return API.post("notes", "/notes", {
+      body: note
     });
   }
 
@@ -35,7 +44,11 @@ export default function Settings() {
         storage,
         source: token.id
       });
-  
+
+      const attachment = "";
+      await createNote({ content, attachment });
+      history.push("/");
+
       alert("Your card has been charged successfully!");
       history.push("/");
     } catch (e) {

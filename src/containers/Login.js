@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 import "./Login.css";
 import { Auth } from "aws-amplify";
@@ -7,6 +7,7 @@ import { useAppContext } from "../libs/contextLib";
 //import { useHistory } from "react-router-dom";
 import { onError } from "../libs/errorLib";
 import { useFormFields } from "../libs/hooksLib";
+//import FacebookButton from "../components/FacebookButton";
 
 export default function Login() {
   //const history = useHistory();
@@ -36,11 +37,19 @@ export default function Login() {
     }
   }
 
+//   handleFbLogin = () => {
+//     this.props.userHasAuthenticated(true);
+//   };
+
   return (
     <div className="Login">
+        {/* <FacebookButton
+            onLogin={this.handleFbLogin}
+        />
+        <hr /> */}
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="userName" bsSize="large">
-          <ControlLabel>UserName</ControlLabel>
+          <FormLabel>UserName</FormLabel>
           <FormControl
             autoFocus
             type="userName"
@@ -49,7 +58,7 @@ export default function Login() {
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
+          <FormLabel>Password</FormLabel>
           <FormControl
             value={fields.password}
             onChange={handleFieldChange}

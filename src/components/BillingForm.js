@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import LoaderButton from "./LoaderButton";
 import { useFormFields } from "../libs/hooksLib";
@@ -38,18 +38,18 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
   return (
     <form className="BillingForm" onSubmit={handleSubmitClick}>
       <FormGroup bsSize="large" controlId="storage">
-        <ControlLabel>Storage</ControlLabel>
+        <FormLabel>Number of Sessions</FormLabel>
         <FormControl
           min="0"
           type="number"
           value={fields.storage}
           onChange={handleFieldChange}
-          placeholder="Number of notes to store"
+          placeholder="Number of sessions"
         />
       </FormGroup>
       <hr />
       <FormGroup bsSize="large" controlId="name">
-        <ControlLabel>Cardholder&apos;s name</ControlLabel>
+        <FormLabel>Cardholder&apos;s name</FormLabel>
         <FormControl
           type="text"
           value={fields.name}
@@ -57,7 +57,7 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           placeholder="Name on the card"
         />
       </FormGroup>
-      <ControlLabel>Credit Card Info</ControlLabel>
+      <FormLabel>Credit Card Info</FormLabel>
       <CardElement
         className="card-field"
         onChange={e => setIsCardComplete(e.complete)}
